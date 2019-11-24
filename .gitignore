@@ -1,9 +1,10 @@
-# Ignore all text files
+# Ignore all seed files
 *.seed
 
-# Ignore executables
+# Ignore executables and .gitignore
 dynCGOL
 cgol
+.gitignore
 
 # Ignore .o executables
 *.o
