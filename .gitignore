@@ -1,0 +1,9 @@
+# Ignore all text files
+*.seed
+
+# Ignore executables
+dynCGOL
+cgol
+
+# Ignore .o executables
+*.o
