@@ -1,10 +1,11 @@
 # Ignore all seed files
 *.seed
 
-# Ignore executables and .gitignore
+# Ignore executables and .* files
 dynCGOL
 cgol
 .gitignore
+.directory
 
 # Ignore .o executables
 *.o

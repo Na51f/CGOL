@@ -1,10 +1,7 @@
-#include <stdio.h>
-#include "game.h"
-
 int lineToRow(char *line, int rows, int cols) {
   int i, j=0;
 
-  if (line[79] != '\n') {
+  if (line[cols*2-1] != '\n') {
     return -1;
   }
 
