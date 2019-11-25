@@ -1,4 +1,10 @@
-all: cgol
+all: cgol dynCGOL
+
+dynCGOL: dynCGOL.o lineToRow.o printGrid.o checkNeighbor.o cmpGrid.o
+	gcc -ansi -o dynCGOL dynCGOL.o lineToRow.o printGrid.o checkNeighbor.o cmpGrid.o
+
+dynCGOL.o: dynCGOL.c
+	gcc -ansi -Wall -c dynCGOL.c
 
 cgol: cgol.o lineToRow.o printGrid.o checkNeighbor.o cmpGrid.o
 	gcc -ansi -o cgol cgol.o lineToRow.o printGrid.o checkNeighbor.o cmpGrid.o

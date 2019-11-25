@@ -83,6 +83,10 @@ int main(int argc, char const *argv[]) {
     for (j = 1; j < cols+1; j++) {
       grid[i][j] = line[j-1];
     }
+    if (i > rows) {
+      printf("Invalid seed file\n");
+      return -3;
+    }
   }
   fclose(fp);
 

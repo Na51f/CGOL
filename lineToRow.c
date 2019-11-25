@@ -1,10 +1,6 @@
 int lineToRow(char *line, int rows, int cols) {
   int i, j=0;
 
-  if (line[cols*2-1] != '\n') {
-    return -1;
-  }
-
   for (i = 0; line[i] != '\n'; i++) {
     if (line[i] == '0') {
       line[j++] = ' ';
@@ -12,11 +8,15 @@ int lineToRow(char *line, int rows, int cols) {
     else if (line[i] == '1') {
       line[j++] = 'X';
     }
-    else if (line[i] == ' ') {
+    else if (line[i] == ' ') { /* Ignores spaces */
     }
     else {
       return -1;
     }
+  }
+
+  if (j != cols) {
+    return -1;
   }
   return 0;
 }
