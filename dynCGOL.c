@@ -31,32 +31,7 @@ int main(int argc, char const *argv[]) {
   int isWrong = 0; /* bools */
 
   /* Checking if the given arguments are correct */
-  if (argc == 4) {
-    strcpy(seed, argv[1]);
-    for (i = 0; i < strlen(argv[2]); i++) { /* Checks if each character are integers */
-      if (!(47 < argv[2][i] && argv[2][i] < 58)) {
-        printf("Invalid Arguments\n");
-        return -1;
-      }
-    }
-    for (i = 0; i < strlen(argv[3]); i++) { /* Checks if each character are integers */
-      if (!(47 < argv[3][i] && argv[3][i] < 58)) {
-        printf("Invalid Arguments\n");
-        return -1;
-      }
-    }
-    if (atoi(argv[2]) < 1) { /* Checks if the second parameter is an int */
-      printf("Invalid Arguments\n");
-      return -1;
-    }
-    if (atoi(argv[3]) < 1) { /* Checks if the second parameter is an int */
-      printf("Invalid Arguments\n");
-      return -1;
-    }
-    rows = atoi(argv[2]);
-    cols = atoi(argv[3]);
-  }
-  else if (argc == 5) {
+  if (argc == 5) {
     for (i = 0; i < strlen(argv[2]); i++) { /* Checks if each character are integers */
       if (!(47 < argv[2][i] && argv[2][i] < 58)) {
         printf("Invalid Arguments\n");
@@ -88,10 +63,9 @@ int main(int argc, char const *argv[]) {
       return -1;
     }
     strcpy(seed, argv[1]);
-    rows = atoi(argv[2]);
-    cols = atoi(argv[3]);
-    maxTick = atoi(argv[4]);
-
+    rows = atoi(argv[3]);
+    cols = atoi(argv[4]);
+    maxTick = atoi(argv[2]);
   }
   else {
     printf("Invalid Arguments\n");
@@ -143,11 +117,11 @@ int main(int argc, char const *argv[]) {
   do {
     printf("Start? (y or n): ");
     if (fgets(input, 100, stdin) != NULL) {
-      if (strcmp(input, "n\n") == 0) {
+      if (strcmp(input, "n\n") == 0 || strcmp(input, "N\n") == 0) {
         printf("Thank you for using dynCGOL.\n");
         return 0;
       }
-      else if (strcmp(input, "y\n") == 0) {
+      else if (strcmp(input, "y\n") == 0 || strcmp(input, "Y\n") == 0) {
         isWrong = 0;
       }
       else {
@@ -182,11 +156,11 @@ int main(int argc, char const *argv[]) {
     do {
       printf("Continue? (y or n): ");
       if (fgets(input, 100, stdin) != NULL) {
-        if (strcmp(input, "n\n") == 0) {
+        if (strcmp(input, "n\n") == 0 || strcmp(input, "N\n") == 0) {
           printf("Thank you for using dynCGOL.\n");
           return 0;
         }
-        else if (strcmp(input, "y\n") == 0) {
+        else if (strcmp(input, "y\n") == 0 || strcmp(input, "Y\n") == 0) {
           isWrong = 0;
         }
         else {

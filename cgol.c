@@ -97,11 +97,11 @@ int main(int argc, char const *argv[]) {
   do {
     printf("Start? (y or n): ");
     if (fgets(input, 100, stdin) != NULL) {
-      if (strcmp(input, "n\n") == 0) {
+      if (strcmp(input, "n\n") == 0 || strcmp(input, "N\n") == 0) {
         printf("Thank you for using cgol.\n");
         return 0;
       }
-      else if (strcmp(input, "y\n") == 0) {
+      else if (strcmp(input, "y\n") == 0 || strcmp(input, "Y\n") == 0) {
         isWrong = 0;
       }
       else {
@@ -136,11 +136,11 @@ int main(int argc, char const *argv[]) {
     do {
       printf("Continue? (y or n): ");
       if (fgets(input, 100, stdin) != NULL) {
-        if (strcmp(input, "n\n") == 0) {
+        if (strcmp(input, "n\n") == 0 || strcmp(input, "N\n") == 0) {
           printf("Thank you for using cgol.\n");
           return 0;
         }
-        else if (strcmp(input, "y\n") == 0) {
+        else if (strcmp(input, "y\n") == 0 || strcmp(input, "Y\n") == 0) {
           isWrong = 0;
         }
         else {
