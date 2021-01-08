@@ -2,7 +2,9 @@
 
   ## AUTHOR
   Name: Nasif Mauthoor
-  email: mmauthoo@uoguelph.ca
+  
+  ## DISCLAIMER
+  This was the final assignment at University of Guelph for the course CIS*1300.
 
   ## PROGRAM DESCRIPTION
   cgol: runs the simulation called Conway's game of life from a given grid with 20 rows and 40 columns of '0's and '1's that resides in a .seed file. The only exception is that the grid is finite, so nothing happens outside the borders.
